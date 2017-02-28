@@ -1,0 +1,66 @@
+- 2d:
+  name: 2d
+
+- 3d:
+  name: 3d
+
+- compositing:
+  name: compositing
+
+- fx:
+  name: fx
+
+- houdini:
+  name: houdini
+
+- maya:
+  name: maya
+
+- mel:
+  name: mel
+
+- mentalray:
+  name: mentalray
+
+- model:
+  name: model
+
+- python:
+  name: python
+
+- redshift:
+  name: redshift
+
+- rendering:
+  name: rendering
+
+- rigging:
+  name: rigging
+
+- scripting:
+  name: scripting
+
+- sculpt:
+  name: sculpt
+
+- shading:
+  name: shading
+
+- substance:
+  name: substance
+
+- terminal:
+  name: terminal
+
+- texture:
+  name: texture
+
+- tool:
+  name: tool
+
+- vex:
+  name: vex
+
+- vray:
+  name: vray
+

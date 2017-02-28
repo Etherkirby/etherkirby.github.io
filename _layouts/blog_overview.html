@@ -1,0 +1,115 @@
+    {% include head.html %}
+
+    {% include sidebar.html %}
+
+    {% if page.title == "Blog" %}
+        {% assign posts = site.blog | where: "layout" , "post" | sort: 'date' | reverse %}
+        {% assign link = "blog" %}
+    {% elsif page.title == "Tools" %}
+        {% assign posts = site.tools | where: "layout" , "post" | sort: 'date' | reverse %}
+        {% assign link = "tools" %}
+    {% endif %}
+
+    {% assign items_amount = posts | size %}
+
+    {% assign thisOffset = site.articlePerPage | times: page.pageNr | minus: site.articlePerPage %}
+    {% assign nextOffset = thisOffset | plus: site.articlePerPage %}
+    {% assign lastOffset = thisOffset | minus: articlePerPage %}
+
+    {% if nextOffset < items_amount %}
+        {% assign hasNext = 1 %}
+    {% else %}
+        {% assign hasNext = 0 %}
+    {% endif %}
+
+    {% if lastOffset > 0 %}
+        {% assign hasLast = 1 %}
+    {% else %}
+        {% assign hasLast = 0 %}
+    {% endif %}
+
+    {% assign nextPage = page.pageNr | plus: 1 %}
+    {% assign lastPage = page.pageNr | minus: 1 %}
+
+    <div id="wrapper">
+        <div id="content">
+
+            <!--<h3>Items Amount: {{items_amount}}<br>
+            thisOffset: {{thisOffset}}<br>
+            nextOffset: {{nextOffset}}<br>
+            hasNext: {{hasNext}}</h3>-->
+
+            <h1>{{ page.title }}</h1>
+
+            <hr>
+
+            <div class="grid">
+
+                {% if page.show_tags %}
+
+                <div class="col col--12-of-12">
+                    <div class="tag-select">
+                        <a href="{{ site.url }}/portfolio/"> #all</a>
+                        {% for t in site.data.tags %}
+                            <a href="{{ site.url }}/portfolio/tags/{{ t.name }}/"> #{{ t.name }}</a>
+                        {% endfor %}
+                    </div>
+                </div>
+
+                {% endif %}
+
+                {% for p in posts limit: site.articlePerPage offset: thisOffset %}
+                <div class="col col--12-of-12">
+                    <a href="{{p.url}}"><h2>{{p.title}}</h2></a>
+                    {% if p.content contains '<!--more-->' %}
+                        {{ p.content | split:'<!--more-->' | first }}
+                        <a href="{{p.url}}">>> Read more</a>
+                    {% else %}
+                        {{ p.content }}
+                    {% endif %}
+                </div>
+                {% endfor %}
+            </div>
+
+            {% if hasNext == 1 or hasLast == 1 %}
+
+                <div class="grid marg-top">
+
+                {% if hasLast == 1 and hasNext == 1 %}
+                    <div class="col col--4-of-12 col--push-2-of-12">
+                        <a href="{{site.url}}/{{link}}/page/{{lastPage}}" class="btn">
+                            Previous Page
+                        </a>
+                    </div>
+
+                    <div class="col col--4-of-12">
+                        <a href="{{site.url}}/{{link}}/page/{{nextPage}}" class="btn">
+                            Next Page
+                        </a>
+                    </div>
+
+                {% elsif hasNext == 1 %}
+                    <div class="col col--4-of-12 col--push-6-of-12">
+                        <a href="{{site.url}}/{{link}}/page/{{nextPage}}" class="btn">
+                            Next Page
+                        </a>
+                    </div>
+
+                {% elsif hasLast == 1 %}
+                    <div class="col col--4-of-12 col--push-2-of-12">
+                        <a href="{{site.url}}/{{link}}/page/{{lastPage}}" class="btn">
+                            Previous Page
+                        </a>
+                    </div>
+
+                {% endif %}
+
+            {% endif %}
+
+            {% include copyright.html %}
+            </div>
+
+        </div>
+    </div>
+
+</body>

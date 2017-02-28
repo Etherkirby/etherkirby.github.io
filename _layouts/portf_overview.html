@@ -1,0 +1,113 @@
+    {% include head.html %}
+
+    {% include sidebar.html %}
+
+    {% assign portf_items = site.portfolio | where: "layout" , "portfolio" | sort: 'date' | reverse %}
+    {% assign items_amount = portf_items | size %}
+
+    {% assign thisOffset = site.portfolioPerPage | times: page.pageNr | minus: site.portfolioPerPage %}
+    {% assign nextOffset = thisOffset | plus: site.portfolioPerPage %}
+    {% assign lastOffset = thisOffset | minus: portfolioPerPage %}
+
+    {% if nextOffset < items_amount %}
+        {% assign hasNext = 1 %}
+    {% else %}
+        {% assign hasNext = 0 %}
+    {% endif %}
+
+    {% if lastOffset > 0 %}
+        {% assign hasLast = 1 %}
+    {% else %}
+        {% assign hasLast = 0 %}
+    {% endif %}
+
+    {% assign nextPage = page.pageNr | plus: 1 %}
+    {% assign lastPage = page.pageNr | minus: 1 %}
+
+    <div id="wrapper">
+        <div id="content">
+
+            <!--<h3>Items Amount: {{items_amount}}<br>
+            thisOffset: {{thisOffset}}<br>
+            nextOffset: {{nextOffset}}<br>
+            hasNext: {{hasNext}}</h3>-->
+
+            <h1>{{ page.title }}</h1>
+
+            <hr>
+
+            <div class="grid">
+
+                <div class="col col--12-of-12">
+                    <div class="tag-select">
+                        <a href="{{ site.url }}/portfolio/"> #all</a>
+                        {% for t in site.data.tags %}
+                            <a href="{{ site.url }}/portfolio/tags/{{ t.name }}/"> #{{ t.name }}</a>
+                        {% endfor %}
+                    </div>
+                </div>
+
+                {% for p in portf_items limit: site.portfolioPerPage offset: thisOffset %}
+                <div class="col col--6-of-12">
+
+                    
+                    <div class="portfolio-item" style="background-image: url({{ site.url }}/{{ p.preview-pic }})">
+                        <a href="{{ p.url }}">
+                            <div class="item-front">
+                                <h2>{{ p.title }}</h2>
+                            </div>
+                        </a>
+                        
+                        <p class="tags">
+                            {% for tag in p.tags %}
+                                <a href="{{ site.url }}/portfolio/tags/{{ tag }}/">#{{ tag }}</a>
+                            {% endfor %}
+                        </p>
+                    </div>
+
+                </div>
+                {% endfor %}
+            </div>
+
+            {% if hasNext == 1 or hasLast == 1 %}
+
+                <div class="grid marg-top">
+
+                {% if hasLast == 1 and hasNext == 1 %}
+                    <div class="col col--4-of-12 col--push-2-of-12">
+                        <a href="{{site.url}}/portfolio/page/{{lastPage}}" class="btn">
+                            Previous Page
+                        </a>
+                    </div>
+
+                    <div class="col col--4-of-12">
+                        <a href="{{site.url}}/portfolio/page/{{nextPage}}" class="btn">
+                            Next Page
+                        </a>
+                    </div>
+
+                {% elsif hasNext == 1 %}
+                    <div class="col col--4-of-12 col--push-6-of-12">
+                        <a href="{{site.url}}/portfolio/page/{{nextPage}}" class="btn">
+                            Next Page
+                        </a>
+                    </div>
+
+                {% elsif hasLast == 1 %}
+                    <div class="col col--4-of-12 col--push-2-of-12">
+                        <a href="{{site.url}}/portfolio/page/{{lastPage}}" class="btn">
+                            Previous Page
+                        </a>
+                    </div>
+
+                {% endif %}
+
+            {% endif %}
+
+            {% include copyright.html %}
+            </div>
+
+        </div>
+    </div>
+
+</body>

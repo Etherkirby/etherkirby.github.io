@@ -1,11 +1,59 @@
 <div id="sidebar">
 
-    <div id="logo"></div>
+    <div id="sidebar-wrapper">
 
-    <h1>Matthias Pichler</h1>
+        <a href="{{ site.url }}"><div class="logo"></div></a>
 
-    <div class="description">
-        This is some text that describes me. Could also be replaced with the site.description, so I can be fancy as well!
+        <div class="bottom">
+
+            <h1>Matthias<br>Pichler</h1>
+
+            <div class="description">
+                {{ site.description }}
+            </div>
+
+            <nav>
+                {% if page.title == "Portfolio" %}
+                    <a href="{{ site.url }}/portfolio" class="current">Portfolio</a>
+                {% else %}
+                    <a href="{{ site.url }}/portfolio">Portfolio</a>
+                {% endif %}
+
+                {% if page.title == "Tools" %}
+                    <a href="{{ site.url }}/tools" class="current">Tools</a>
+                {% else %}
+                    <a href="{{ site.url }}/tools">Tools</a>
+                {% endif %}
+
+                {% if page.title == "Blog" %}
+                    <a href="{{ site.url }}/blog" class="current">Blog</a>
+                {% else %}
+                    <a href="{{ site.url }}/blog">Blog</a>
+                {% endif %}
+
+                {% if page.title == "About" %}
+                    <a href="{{ site.url }}/about" class="current">About Me</a>
+                {% else %}
+                    <a href="{{ site.url }}/about">About Me</a>
+                {% endif %}
+
+                {% if page.title == "Contact" %}
+                    <a href="{{ site.url }}/contact" class="current">Contact</a>
+                {% else %}
+                    <a href="{{ site.url }}/contact">Contact</a>
+                {% endif %}
+            </nav>
+
+            <div class="socials">
+
+                <a href="."><div class="social s-linkedin"></div></a>
+                <a href="."><div class="social s-artstation"></div></a>
+                <a href="."><div class="social s-youtube"></div></a>
+
+            </div>
+
+        </div>
+
     </div>
 
 </div>

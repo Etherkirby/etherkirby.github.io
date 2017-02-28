@@ -1,0 +1,23 @@
+- title: "FX"
+  percent: 80
+  image: assets/imgs/ext_logos/fire.svg
+
+- title: "Rigging"
+  percent: 70
+  image: assets/imgs/ext_logos/wrench.svg
+
+- title: "Surfacing"
+  percent: 80
+  image: assets/imgs/ext_logos/eyedropper.svg
+
+- title: "Scripting / Tool Development"
+  percent: 70
+  image: assets/imgs/ext_logos/terminal.svg
+
+- title: "Rendering"
+  percent: 70
+  image: assets/imgs/ext_logos/cog.svg
+
+- title: "Compositing"
+  percent: 60
+  image: assets/imgs/ext_logos/layers.svg

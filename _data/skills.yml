@@ -1,0 +1,23 @@
+- title: "Houdini"
+  percent: 90
+  image: assets/imgs/ext_logos/Houdini-Logo.png
+
+- title: "Maya"
+  percent: 80
+  image: assets/imgs/ext_logos/maya-logo.png
+
+- title: "Nuke"
+  percent: 70
+  image: assets/imgs/ext_logos/nuk.png
+
+- title: "Python"
+  percent: 80
+  image: assets/imgs/ext_logos/python-logo_500.png
+
+- title: "VEX"
+  percent: 70
+  image: assets/imgs/ext_logos/vex.png
+
+- title: "MEL"
+  percent: 70
+  image: assets/imgs/ext_logos/mel.png

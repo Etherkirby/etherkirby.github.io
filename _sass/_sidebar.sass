@@ -1,2 +1,203 @@
+$break-mid: 980px
+$break-small: 700px
+
+
+body
+  background-color: #24272E
+
 #sidebar
-  color: pink
+  color: #FFF
+  background-color: #1F2226
+
+  position: fixed
+  top: 0px
+  left: 0px
+  bottom: 0px
+  width: 280px
+  padding: 20px
+
+  .logo
+    background: 
+      image: url(../assets/imgs/logo/mp_logo_color_256.png)
+      repeat: no-repeat
+      size: contain
+    width: 150px
+    height: 150px
+    position: relative
+    left: 50%
+    transform: translateX(-50%)
+    display: inline-block
+
+  .bottom
+    position: absolute
+    bottom: 20px
+    width: calc(100% - 40px)
+    box-sizing: border-box
+
+    h1
+      font-family: adelle, skolar-sans-latin, Helvetica, Arial, sans-serif
+      font-size: 55px
+      line-height: 1.1em
+      margin: 0px 0px
+
+    .description
+      font-size: 22px
+      opacity: 0.7
+      line-height: 1.4em
+      font-weight: 600
+      width: 100%
+
+    nav
+      margin-top: 30px
+
+      a
+        display: block
+        width: auto
+        float: none
+        padding: 3px 10px 3px 0px
+        opacity: 0.7
+        font-size: 20px
+        position: relative
+        text-decoration: none
+        color: #FFF
+        line-height: 1.4em
+        font-weight: 600
+
+        &:before
+          position: absolute
+          content: ""
+          background-color: #E31EAA
+
+          width: 2px
+          height: 0px
+
+          left: -10px
+          bottom: 15px
+          transition: all 150ms ease-in-out
+
+        &:hover
+          opacity: 1
+
+        &:hover:before
+          position: absolute
+          content: ""
+          background-color: #E31EAA
+
+          width: 2px
+          height: 26px
+
+          left: -10px
+          bottom: 1px
+
+        &:visited
+          color: inherit
+
+      .current
+        opacity: 1
+
+    .socials
+      margin-top: 20px
+
+    .social
+      clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)
+      background-color: white
+
+      width: 32px
+      height: 32px
+
+      display: inline-block
+
+
+
+
+@media screen and (max-width: $break-mid)
+  body
+    //background-color: #FFF
+
+  #sidebar
+    position: static
+    width: 100%
+    box-sizing: border-box
+
+    #sidebar-wrapper
+      //background-color: pink
+      margin: 0px auto
+      width: 580px
+      position: relative
+      text-align: center
+
+      .logo
+        left: 70px
+        transform: translateX(0%)
+        width: 150px
+        height: 150px
+        position: absolute
+
+      .bottom
+        position: relative
+        width: 100%
+
+        h1
+          position: absolute
+          top: 33px
+          right: 70px
+          margin-bottom: 50px
+          text-align: left
+          display: inline-block
+
+          &:after
+            content: ""
+            clear: both
+            display: table
+
+        .description
+          display: inline-block
+          margin-top: 200px
+
+        nav
+
+          a
+            display: inline-block
+            margin-left: 30px
+
+        .socials
+          margin-top: 40px
+
+        .social
+          width: 50px
+          height: 50px
+
+
+
+@media screen and (max-width: $break-small)
+
+  body
+
+    #sidebar
+
+      #sidebar-wrapper
+        width: 60%
+
+        .logo
+          position: static
+          width: 100px
+          height: 100px
+
+        .bottom
+
+          h1
+            position: static
+            margin-top: 30px
+            margin-bottom: 0px
+            text-align: center
+
+          .description
+            margin-top: 20px
+
+          
+          nav
+
+            a
+              display: inline-block
+
+              margin: 30px 10px 0px 10px
