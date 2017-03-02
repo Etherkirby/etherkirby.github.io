@@ -35,9 +35,12 @@ defaults:
 name:                 Matthias Pichler
 title:                Matthias Pichler
 tagline:              3D Artist and nerd dude man
-description:          Portfolio and blog.<br> PythonXX, 3D Animation & VFX and various other topics.
+description:          Portfolio and blog.<br> Python, 3D Animation & VFX and various other topics.
 
 portfolioPerPage: 10
 
 articlePerPage: 5
 excerptTag: <!--more-->
+
+url: http://www.matthiaspichler.com
+add-url: 

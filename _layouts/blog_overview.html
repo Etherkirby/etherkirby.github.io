@@ -49,9 +49,9 @@
 
                 <div class="col col--12-of-12">
                     <div class="tag-select">
-                        <a href="{{ site.url }}/portfolio/"> #all</a>
+                        <a href="{{ site.url }}{{site.add-url}}/portfolio/"> #all</a>
                         {% for t in site.data.tags %}
-                            <a href="{{ site.url }}/portfolio/tags/{{ t.name }}/"> #{{ t.name }}</a>
+                            <a href="{{ site.url }}{{site.add-url}}/portfolio/tags/{{ t.name }}/"> #{{ t.name }}</a>
                         {% endfor %}
                     </div>
                 </div>
@@ -60,10 +60,10 @@
 
                 {% for p in posts limit: site.articlePerPage offset: thisOffset %}
                 <div class="col col--12-of-12">
-                    <a href="{{p.url}}"><h2>{{p.title}}</h2></a>
+                    <a href="{{site.url}}{{site.add-url}}/{{p.url}}"><h2>{{p.title}}</h2></a>
                     {% if p.content contains '<!--more-->' %}
                         {{ p.content | split:'<!--more-->' | first }}
-                        <a href="{{p.url}}">>> Read more</a>
+                        <a href="{{site.url}}{{site.add-url}}/{{p.url}}">>> Read more</a>
                     {% else %}
                         {{ p.content }}
                     {% endif %}
@@ -77,27 +77,27 @@
 
                 {% if hasLast == 1 and hasNext == 1 %}
                     <div class="col col--4-of-12 col--push-2-of-12">
-                        <a href="{{site.url}}/{{link}}/page/{{lastPage}}" class="btn">
+                        <a href="{{site.url}}{{site.add-url}}/{{link}}/page/{{lastPage}}" class="btn">
                             Previous Page
                         </a>
                     </div>
 
                     <div class="col col--4-of-12">
-                        <a href="{{site.url}}/{{link}}/page/{{nextPage}}" class="btn">
+                        <a href="{{site.url}}{{site.add-url}}/{{link}}/page/{{nextPage}}" class="btn">
                             Next Page
                         </a>
                     </div>
 
                 {% elsif hasNext == 1 %}
                     <div class="col col--4-of-12 col--push-6-of-12">
-                        <a href="{{site.url}}/{{link}}/page/{{nextPage}}" class="btn">
+                        <a href="{{site.url}}{{site.add-url}}/{{link}}/page/{{nextPage}}" class="btn">
                             Next Page
                         </a>
                     </div>
 
                 {% elsif hasLast == 1 %}
                     <div class="col col--4-of-12 col--push-2-of-12">
-                        <a href="{{site.url}}/{{link}}/page/{{lastPage}}" class="btn">
+                        <a href="{{site.url}}{{site.add-url}}/{{link}}/page/{{lastPage}}" class="btn">
                             Previous Page
                         </a>
                     </div>

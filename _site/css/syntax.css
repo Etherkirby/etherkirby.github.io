@@ -1,19 +1,31 @@
 .highlight {
-  margin: 20px 0px; }
+  margin: 2rem 0px; }
 
 pre {
-  padding: 10px;
+  padding: 1rem;
   box-sizing: border-box;
   border: 1px solid #EB70CE;
-  font-size: 16px;
+  font-size: 1.6rem;
   line-height: 1.5em;
-  font-family: "Fira Mono", monospace !important; }
+  font-family: "Fira Mono", monospace !important;
+  background-color: rgba(0, 0, 0, 0.2); }
+  pre code {
+    color: inherit;
+    background-color: transparent;
+    border-radius: 0px;
+    padding: 0px; }
 
 pre.lineno {
   border-right: 0px; }
 
 code {
-  font-family: "Fira Mono", monospace !important; }
+  font-family: "Fira Mono", monospace !important;
+  font-size: 1.6rem;
+  display: inline-block;
+  color: #EB70CE;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  padding: 0px 0.5rem; }
 
 .highlight .c {
   color: #7F8183;

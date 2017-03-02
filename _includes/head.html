@@ -6,16 +6,20 @@
         {% endif %}
 </title>
 
-<link rel="stylesheet" href="{{ site.url }}/css/normalize.css">
-<link rel="stylesheet" href="{{ site.url }}/css/toastgrid.css">
-<link rel="stylesheet" href="{{ site.url }}/css/main.css">
-<link rel="stylesheet" href="{{ site.url }}/css/syntax.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
 
-<link rel="apple-touch-icon" sizes="180x180" href="{{ site.url }}/favicons/apple-touch-icon.png">
-<link rel="icon" type="image/png" href="{{ site.url }}/favicons/favicon-32x32.png" sizes="32x32">
-<link rel="icon" type="image/png" href="{{ site.url }}/favicons/favicon-16x16.png" sizes="16x16">
-<link rel="manifest" href="{{ site.url }}/favicons/manifest.json">
-<link rel="mask-icon" href="{{ site.url }}/favicons/safari-pinned-tab.svg" color="#e31eaa">
+<link rel="stylesheet" href="{{ site.url }}{{site.add-url}}/css/normalize.css">
+<link rel="stylesheet" href="{{ site.url }}{{site.add-url}}/css/toastgrid.css">
+<link rel="stylesheet" href="{{ site.url }}{{site.add-url}}/css/main.css">
+<link rel="stylesheet" href="{{ site.url }}{{site.add-url}}/css/syntax.css">
+<link rel="stylesheet" href="{{ site.url }}{{site.add-url}}/css/mobile.css" media="screen and (max-device-width: 980px), (max-width: 980px)">
+
+<link rel="apple-touch-icon" sizes="180x180" href="{{ site.url }}{{site.add-url}}/favicons/apple-touch-icon.png">
+<link rel="icon" type="image/png" href="{{ site.url }}{{site.add-url}}/favicons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="{{ site.url }}{{site.add-url}}/favicons/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="{{ site.url }}{{site.add-url}}/favicons/manifest.json">
+<link rel="mask-icon" href="{{ site.url }}{{site.add-url}}/favicons/safari-pinned-tab.svg" color="#e31eaa">
 <meta name="theme-color" content="#ffffff">
 
 <link href="https://fonts.googleapis.com/css?family=Fira+Mono:400,700" rel="stylesheet">
@@ -23,7 +27,7 @@
 <script src='https://www.google.com/recaptcha/api.js'></script>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script src="{{site.url}}/scripts/jquery.fitvids.js"></script>
+<script src="{{site.url}}{{site.add-url}}/scripts/jquery.fitvids.js"></script>
 
 <script>
   $(document).ready(function(){

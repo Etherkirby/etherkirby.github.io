@@ -188,14 +188,14 @@ $toast-pulls: true !default;
   padding-left: $toast-gutter-width;
   vertical-align: top;
 
-  @media (max-width: $toast-breakpoint-medium) {
+  @media (max-device-width: $toast-breakpoint-medium), (max-width: $toast-breakpoint-medium) {
     display: block;
     margin-left: 0;
     margin-right: 0;
     width: auto;
   }
 
-  @media (max-width: $toast-breakpoint-medium) and (min-width: $toast-breakpoint-small) {
+  @media (max-device-width: $toast-breakpoint-medium) and (min-device-width: $toast-breakpoint-small), (max-width: $toast-breakpoint-medium) {
     &[class*="#{$toast-grid-column-namespace}--m-"] {
       display: inline-block;
       margin-right: -.24em;

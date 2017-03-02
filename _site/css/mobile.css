@@ -1,0 +1,110 @@
+@media screen and (max-device-width: 980px), (max-width: 980px) {
+  #sidebar {
+    position: static;
+    width: 100%;
+    box-sizing: border-box; }
+    #sidebar #sidebar-wrapper {
+      margin: 0px auto;
+      width: 80vw;
+      position: relative;
+      text-align: center; }
+      #sidebar #sidebar-wrapper .logo-cont {
+        margin: 0px auto; }
+        #sidebar #sidebar-wrapper .logo-cont .logo {
+          transform: translateX(0%);
+          width: 150px;
+          height: 150px;
+          position: static;
+          margin-right: 20px; } }
+        @media screen and (max-device-width: 980px) and (max-height: 680px), screen and (max-width: 980px) and (max-height: 680px) {
+          #sidebar #sidebar-wrapper .logo-cont .logo {
+            display: inline-block; } }
+@media screen and (max-device-width: 980px), (max-width: 980px) {
+        #sidebar #sidebar-wrapper .logo-cont h1 {
+          position: relative;
+          top: -20px;
+          margin-bottom: 0px;
+          text-align: left;
+          display: inline-block;
+          color: #FFF;
+          text-decoration: none; }
+        #sidebar #sidebar-wrapper .logo-cont a:hover {
+          text-decoration: none; }
+      #sidebar #sidebar-wrapper .bottom {
+        position: relative;
+        width: 100%; }
+        #sidebar #sidebar-wrapper .bottom h1 {
+          display: none; }
+          #sidebar #sidebar-wrapper .bottom h1:after {
+            content: "";
+            clear: both;
+            display: table; }
+        #sidebar #sidebar-wrapper .bottom .description {
+          display: inline-block;
+          margin-top: 50px; }
+        #sidebar #sidebar-wrapper .bottom nav a {
+          display: inline-block;
+          margin-left: 30px; }
+        #sidebar #sidebar-wrapper .bottom .socials {
+          margin-top: 40px; }
+        #sidebar #sidebar-wrapper .bottom .social {
+          width: 50px;
+          height: 50px; } }
+@media screen and (max-device-width: 700px), (max-width: 700px) {
+  body #sidebar #sidebar-wrapper {
+    width: 80%; }
+    body #sidebar #sidebar-wrapper .logo-cont .logo {
+      position: static;
+      width: 100px;
+      height: 100px;
+      margin-right: 0px; }
+    body #sidebar #sidebar-wrapper .logo-cont h1 {
+      display: block;
+      text-align: center;
+      margin-top: 50px; }
+    body #sidebar #sidebar-wrapper .bottom .description {
+      margin-top: 20px; }
+    body #sidebar #sidebar-wrapper .bottom nav a {
+      display: inline-block;
+      margin: 30px 10px 0px 10px; } }
+@media screen and (max-device-width: 980px), (max-width: 980px) {
+  #wrapper {
+    margin-left: 20px; } }
+@media screen and (max-device-width: 980px) {
+  #wrapper #content {
+    width: 80vw;
+    font-size: 1.8rem; } }
+@media screen and (max-width: 980px) {
+  #wrapper #content {
+    width: 80vw; } }
+
+@media screen and (max-device-width: 700px), (max-width: 700px) {
+  .portfolio-item {
+    height: 250px; } }
+@media screen and (max-device-width: 700px) {
+  .portfolio-item .item-front h2 {
+    font-size: 3.4rem !important; } }
+
+@media screen and (max-device-width: 700px) {
+  #wrapper #content .profile-wrapper {
+    height: 200px;
+    width: 200px; } }
+@media screen and (max-device-width: 700px) {
+  #wrapper #content .profile {
+    top: 2px;
+    right: 2px;
+    bottom: 2px;
+    left: 2px; } }
+@media screen and (max-device-width: 700px) {
+  #wrapper #content .skill-container .poly-icon {
+    top: 0.5rem; } }
+@media screen and (max-device-width: 700px), (max-width: 700px) {
+  #wrapper #content .skill-container .progress-bar {
+    width: calc(100% - 6.5rem); } }
+
+@media screen and (max-width: 980px) {
+  html {
+    font-size: 10px; } }
+@media screen and (max-device-width: 980px) {
+  html {
+    font-size: 10px; } }

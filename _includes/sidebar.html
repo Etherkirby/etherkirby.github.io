@@ -2,11 +2,12 @@
 
     <div id="sidebar-wrapper">
 
-        <a href="{{ site.url }}"><div class="logo"></div></a>
-
+        <div class="logo-cont"><a href="{{ site.url }}{{site.add-url}}"><div class="logo"></div></a>
+        <a href="{{site.url}}{{site.add-url}}"><h1>Matthias<br>Pichler</h1></a>
+        </div>
         <div class="bottom">
 
-            <h1>Matthias<br>Pichler</h1>
+            <a href="{{site.url}}{{site.add-url}}"><h1>Matthias<br>Pichler</h1></a>
 
             <div class="description">
                 {{ site.description }}
@@ -14,41 +15,43 @@
 
             <nav>
                 {% if page.title == "Portfolio" %}
-                    <a href="{{ site.url }}/portfolio" class="current">Portfolio</a>
+                    <a href="{{ site.url }}{{site.add-url}}/portfolio" class="current">Portfolio</a>
                 {% else %}
-                    <a href="{{ site.url }}/portfolio">Portfolio</a>
+                    <a href="{{ site.url }}{{site.add-url}}/portfolio">Portfolio</a>
                 {% endif %}
 
                 {% if page.title == "Tools" %}
-                    <a href="{{ site.url }}/tools" class="current">Tools</a>
+                    <a href="{{ site.url }}{{site.add-url}}/tools" class="current">Tools</a>
                 {% else %}
-                    <a href="{{ site.url }}/tools">Tools</a>
+                    <a href="{{ site.url }}{{site.add-url}}/tools">Tools</a>
                 {% endif %}
 
                 {% if page.title == "Blog" %}
-                    <a href="{{ site.url }}/blog" class="current">Blog</a>
+                    <a href="{{ site.url }}{{site.add-url}}/blog" class="current">Blog</a>
                 {% else %}
-                    <a href="{{ site.url }}/blog">Blog</a>
+                    <a href="{{ site.url }}{{site.add-url}}/blog">Blog</a>
                 {% endif %}
 
                 {% if page.title == "About" %}
-                    <a href="{{ site.url }}/about" class="current">About Me</a>
+                    <a href="{{ site.url }}{{site.add-url}}/about" class="current">About Me</a>
                 {% else %}
-                    <a href="{{ site.url }}/about">About Me</a>
+                    <a href="{{ site.url }}{{site.add-url}}/about">About Me</a>
                 {% endif %}
 
                 {% if page.title == "Contact" %}
-                    <a href="{{ site.url }}/contact" class="current">Contact</a>
+                    <a href="{{ site.url }}{{site.add-url}}/contact" class="current">Contact</a>
                 {% else %}
-                    <a href="{{ site.url }}/contact">Contact</a>
+                    <a href="{{ site.url }}{{site.add-url}}/contact">Contact</a>
                 {% endif %}
             </nav>
 
             <div class="socials">
 
-                <a href="."><div class="social s-linkedin"></div></a>
-                <a href="."><div class="social s-artstation"></div></a>
-                <a href="."><div class="social s-youtube"></div></a>
+                <a href="https://www.linkedin.com/in/matthias-pichler-68b68bb4/" target="_blank"><div class="social s-linkedin"></div></a>
+                <a href="https://www.artstation.com/artist/etherkirby" target="_blank"><div class="social s-artstation"></div></a>
+                <a href="https://www.youtube.com/Etherkirby" target="_blank"><div class="social s-youtube"></div></a>
+                <a href="https://vimeo.com/user17715202" target="_blank"><div class="social s-vimeo"></div></a>
+                <a href="http://www.twitter.com/MatzPichler" target="_blank"><div class="social s-twitter"></div></a>
 
             </div>
 

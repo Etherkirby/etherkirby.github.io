@@ -1,0 +1,192 @@
+$flow: #BBBCBD
+$lightpink: #EB70CE
+$darker: #333
+$middleGray: #7F8183
+
+$break-mid: 980px
+$break-small: 700px
+
+// SIDEBAR
+
+@media screen and (max-device-width: $break-mid), (max-width: $break-mid)
+  body
+    //background-color: #FFF
+
+  #sidebar
+    position: static
+    width: 100%
+    box-sizing: border-box
+
+    #sidebar-wrapper
+      //background-color: pink
+      margin: 0px auto
+      width: 80vw
+      position: relative
+      text-align: center
+
+      .logo-cont
+        margin: 0px auto
+
+        .logo
+          transform: translateX(0%)
+          width: 150px
+          height: 150px
+          position: static
+          margin-right: 20px
+
+          @media screen and (max-height: 680px)
+            display: inline-block
+
+        h1
+          position: relative
+          top: -20px
+          margin-bottom: 0px
+          text-align: left
+          display: inline-block
+          color: #FFF
+          text-decoration: none
+
+        a:hover
+          text-decoration: none
+
+      .bottom
+        position: relative
+        width: 100%
+
+        h1
+          display: none
+
+          &:after
+            content: ""
+            clear: both
+            display: table
+
+        .description
+          display: inline-block
+          margin-top: 50px
+
+        nav
+
+          a
+            display: inline-block
+            margin-left: 30px
+
+        .socials
+          margin-top: 40px
+
+        .social
+          width: 50px
+          height: 50px
+
+
+
+@media screen and (max-device-width: $break-small), (max-width: $break-small)
+
+  body
+
+    #sidebar
+
+      #sidebar-wrapper
+        width: 80%
+
+        .logo-cont
+
+          .logo
+            position: static
+            width: 100px
+            height: 100px
+            margin-right: 0px
+
+          h1
+            display: block
+            text-align: center
+            margin-top: 50px
+
+        .bottom
+
+          .description
+            margin-top: 20px
+
+          
+          nav
+
+            a
+              display: inline-block
+
+              margin: 30px 10px 0px 10px
+
+
+
+// CONTENT
+
+#wrapper
+  @media screen and (max-device-width: $break-mid), (max-width: $break-mid)
+    margin-left: 20px
+
+  #content
+    @media screen and (max-device-width: $break-mid)
+      width: 80vw
+      font-size: 1.8rem
+
+    @media screen and (max-width: $break-mid)
+      width: 80vw
+
+
+.portfolio-item
+  @media screen and (max-device-width: $break-mid), (max-width: $break-mid)
+    //height: 300px
+
+  @media screen and (max-device-width: $break-small), (max-width: $break-small)
+    height: 250px
+
+  .item-front
+
+    h2
+      @media screen and (max-device-width: $break-small)
+        font-size: 3.4rem !important
+
+
+// ABOUT
+
+$profile-size: 200px
+$profile-margin: 2px
+
+$profile-size-s: 200px
+$profile-margin-s: 2px
+
+#wrapper
+  
+  #content
+
+    .profile-wrapper
+      @media screen and (max-device-width: $break-small)
+        height: $profile-size-s
+        width: $profile-size-s
+
+
+    .profile
+      @media screen and (max-device-width: $break-small)
+        top: $profile-margin-s
+        right: $profile-margin-s
+        bottom: $profile-margin-s
+        left: $profile-margin-s
+
+    .skill-container
+
+      .poly-icon
+        @media screen and (max-device-width: $break-small)
+          top: 0.5rem
+
+      .progress-bar
+        @media screen and (max-device-width: $break-small), (max-width: $break-small)
+          width: calc(100% - 6.5rem)
+
+
+
+@media screen and (max-width: $break-mid)
+  html
+    font-size: 10px
+
+@media screen and (max-device-width: $break-mid)
+  html
+    font-size: 10px

@@ -1,3 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8">
-  <path d="M0 0v4h4v-4h-4zm5 2v3h-3v1h4v-4h-1zm2 2v3h-3v1h4v-4h-1z" fill="#EB70CE"/>
-</svg>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><style>.cls-1{fill:#fff;}.cls-2{fill:#eb70ce;}</style></defs><title>layers</title><polygon class="cls-1" points="100 75 100 25 50 0 0 25 0 75 50 100 100 75"/><path class="cls-2" d="M25,26V49H48V26ZM53.75,37.5V54.75H36.5V60.5h23v-23ZM65.25,49V66.25H48V72H71V49Z"/></svg>

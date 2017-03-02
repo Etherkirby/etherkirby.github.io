@@ -16,17 +16,31 @@ body
   width: 280px
   padding: 20px
 
-  .logo
-    background: 
-      image: url(../assets/imgs/logo/mp_logo_color_256.png)
-      repeat: no-repeat
-      size: contain
-    width: 150px
-    height: 150px
-    position: relative
-    left: 50%
-    transform: translateX(-50%)
-    display: inline-block
+  .logo-cont
+
+    .logo
+      background: 
+        image: url(../assets/imgs/logo/mp_logo_color_256.png)
+        repeat: no-repeat
+        size: contain
+      width: 150px
+      height: 150px
+      position: relative
+      left: 50%
+      transform: translateX(-50%)
+      display: inline-block
+
+      @media screen and (max-height: 680px)
+        display: none
+
+    h1
+      display: none
+      font-family: adelle, skolar-sans-latin, Helvetica, Arial, sans-serif
+      font-size: 5.5rem
+      line-height: 1.1em
+      margin: 0px 0px
+      color: #FFF
+      text-decoaration: none
 
   .bottom
     position: absolute
@@ -36,12 +50,20 @@ body
 
     h1
       font-family: adelle, skolar-sans-latin, Helvetica, Arial, sans-serif
-      font-size: 55px
+      font-size: 5.5rem
       line-height: 1.1em
       margin: 0px 0px
+      color: #FFF
+      text-decoration: none
+
+      @media screen and (max-height: 650px)
+        font-size: calc(10vh - 10px)
+
+    a:hover
+      text-decoration: none
 
     .description
-      font-size: 22px
+      font-size: 2.2rem
       opacity: 0.7
       line-height: 1.4em
       font-weight: 600
@@ -56,7 +78,7 @@ body
         float: none
         padding: 3px 10px 3px 0px
         opacity: 0.7
-        font-size: 20px
+        font-size: 2rem
         position: relative
         text-decoration: none
         color: #FFF
@@ -72,7 +94,7 @@ body
           height: 0px
 
           left: -10px
-          bottom: 15px
+          bottom: 1.5rem
           transition: all 150ms ease-in-out
 
         &:hover
@@ -84,10 +106,10 @@ body
           background-color: #E31EAA
 
           width: 2px
-          height: 26px
+          height: 2.6rem
 
           left: -10px
-          bottom: 1px
+          bottom: 0.1rem
 
         &:visited
           color: inherit
@@ -99,105 +121,36 @@ body
       margin-top: 20px
 
     .social
-      clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)
-      background-color: white
+      background-color: transparent
 
       width: 32px
       height: 32px
+      background-size: contain
+      margin-right: 5px
 
       display: inline-block
 
+    .s-linkedin
+      background-image: url(../assets/imgs/soc_logos/linkedin.png)
+      &:hover
+        background-image: url(../assets/imgs/soc_logos/linkedin_h.png)
 
+    .s-artstation
+      background-image: url(../assets/imgs/soc_logos/artstation.png)
+      &:hover
+        background-image: url(../assets/imgs/soc_logos/artstation_h.png)
 
+    .s-youtube
+      background-image: url(../assets/imgs/soc_logos/youtube.png)
+      &:hover
+        background-image: url(../assets/imgs/soc_logos/youtube_h.png)
 
-@media screen and (max-width: $break-mid)
-  body
-    //background-color: #FFF
+    .s-vimeo
+      background-image: url(../assets/imgs/soc_logos/vimeo.png)
+      &:hover
+        background-image: url(../assets/imgs/soc_logos/vimeo_h.png)
 
-  #sidebar
-    position: static
-    width: 100%
-    box-sizing: border-box
-
-    #sidebar-wrapper
-      //background-color: pink
-      margin: 0px auto
-      width: 580px
-      position: relative
-      text-align: center
-
-      .logo
-        left: 70px
-        transform: translateX(0%)
-        width: 150px
-        height: 150px
-        position: absolute
-
-      .bottom
-        position: relative
-        width: 100%
-
-        h1
-          position: absolute
-          top: 33px
-          right: 70px
-          margin-bottom: 50px
-          text-align: left
-          display: inline-block
-
-          &:after
-            content: ""
-            clear: both
-            display: table
-
-        .description
-          display: inline-block
-          margin-top: 200px
-
-        nav
-
-          a
-            display: inline-block
-            margin-left: 30px
-
-        .socials
-          margin-top: 40px
-
-        .social
-          width: 50px
-          height: 50px
-
-
-
-@media screen and (max-width: $break-small)
-
-  body
-
-    #sidebar
-
-      #sidebar-wrapper
-        width: 60%
-
-        .logo
-          position: static
-          width: 100px
-          height: 100px
-
-        .bottom
-
-          h1
-            position: static
-            margin-top: 30px
-            margin-bottom: 0px
-            text-align: center
-
-          .description
-            margin-top: 20px
-
-          
-          nav
-
-            a
-              display: inline-block
-
-              margin: 30px 10px 0px 10px
+    .s-twitter
+      background-image: url(../assets/imgs/soc_logos/twitter.png)
+      &:hover
+        background-image: url(../assets/imgs/soc_logos/twitter_h.png)

@@ -1,11 +1,11 @@
-- 2d:
-  name: 2d
+# - 2d:
+#   name: 2d
 
 - 3d:
   name: 3d
 
-- compositing:
-  name: compositing
+# - compositing:
+#   name: compositing
 
 - fx:
   name: fx
@@ -16,8 +16,8 @@
 - maya:
   name: maya
 
-- mel:
-  name: mel
+# - mel:
+#   name: mel
 
 - mentalray:
   name: mentalray
@@ -25,38 +25,38 @@
 - model:
   name: model
 
-- python:
-  name: python
+# - python:
+#   name: python
 
-- redshift:
-  name: redshift
+# - redshift:
+#   name: redshift
 
-- rendering:
-  name: rendering
+# - rendering:
+#   name: rendering
 
-- rigging:
-  name: rigging
+# - rigging:
+#   name: rigging
 
-- scripting:
-  name: scripting
+# - scripting:
+#   name: scripting
 
-- sculpt:
-  name: sculpt
+# - sculpt:
+#   name: sculpt
 
-- shading:
-  name: shading
+# - shading:
+#   name: shading
 
 - substance:
   name: substance
 
-- terminal:
-  name: terminal
+# - terminal:
+#   name: terminal
 
 - texture:
   name: texture
 
-- tool:
-  name: tool
+# - tool:
+#   name: tool
 
 - vex:
   name: vex

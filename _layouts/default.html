@@ -16,20 +16,20 @@
 
                 {% if page.next.url and page.previous.url %}
                     <div class="col col--4-of-12 col--push-2-of-12">
-                        <a href="{{ page.next.url }}" class="btn">
+                        <a href="{{site.add-url}}/{{ page.next.url }}" class="btn">
                             Newer Work
                         </a>
                     </div>
 
                     <div class="col col--4-of-12">
-                        <a href="{{ page.previous.url }}" class="btn">
+                        <a href="{{site.add-url}}/{{ page.previous.url }}" class="btn">
                             Older Work
                         </a>
                     </div>
 
                     {% elsif page.next.url %}
                         <div class="col col--4-of-12 col--push-2-of-12">
-                            <a href="{{ page.next.url }}" class="buttonlink">
+                            <a href="{{site.add-url}}/{{ page.next.url }}" class="buttonlink">
                                 Newer Work
                             </a>
                         </div>
@@ -37,7 +37,7 @@
                     {% elsif page.previous.url %}
 
                         <div class="col col--4-of-12 col--push-6-of-12">
-                            <a href="{{ page.previous.url }}" class="buttonlink">
+                            <a href="{{site.add-url}}/{{ page.previous.url }}" class="buttonlink">
                                 Older Work
                             </a>
                         </div>

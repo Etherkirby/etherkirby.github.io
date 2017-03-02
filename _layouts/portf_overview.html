@@ -40,19 +40,25 @@
 
                 <div class="col col--12-of-12">
                     <div class="tag-select">
-                        <a href="{{ site.url }}/portfolio/"> #all</a>
+                        <a href="{{ site.url }}{{site.add-url}}/portfolio/"> #all</a>
                         {% for t in site.data.tags %}
-                            <a href="{{ site.url }}/portfolio/tags/{{ t.name }}/"> #{{ t.name }}</a>
+                            <a href="{{ site.url }}{{site.add-url}}/portfolio/tags/{{ t.name }}/"> #{{ t.name }}</a>
                         {% endfor %}
                     </div>
                 </div>
+
+                {% if page.demo-link %}
+                <div class="col col--12-of-12 marg-bot">
+                    {{page.demo-link}}
+                </div>
+                {% endif %}
 
                 {% for p in portf_items limit: site.portfolioPerPage offset: thisOffset %}
                 <div class="col col--6-of-12">
 
                     
-                    <div class="portfolio-item" style="background-image: url({{ site.url }}/{{ p.preview-pic }})">
-                        <a href="{{ p.url }}">
+                    <div class="portfolio-item" style="background-image: url({{ site.url }}{{site.add-url}}/{{ p.preview-pic }})">
+                        <a href="{{site.add-url}}{{ p.url }}">
                             <div class="item-front">
                                 <h2>{{ p.title }}</h2>
                             </div>
@@ -60,7 +66,7 @@
                         
                         <p class="tags">
                             {% for tag in p.tags %}
-                                <a href="{{ site.url }}/portfolio/tags/{{ tag }}/">#{{ tag }}</a>
+                                <a href="{{ site.url }}{{site.add-url}}/portfolio/tags/{{ tag }}/">#{{ tag }}</a>
                             {% endfor %}
                         </p>
                     </div>
@@ -75,27 +81,27 @@
 
                 {% if hasLast == 1 and hasNext == 1 %}
                     <div class="col col--4-of-12 col--push-2-of-12">
-                        <a href="{{site.url}}/portfolio/page/{{lastPage}}" class="btn">
+                        <a href="{{site.url}}{{site.add-url}}/portfolio/page/{{lastPage}}" class="btn">
                             Previous Page
                         </a>
                     </div>
 
                     <div class="col col--4-of-12">
-                        <a href="{{site.url}}/portfolio/page/{{nextPage}}" class="btn">
+                        <a href="{{site.url}}{{site.add-url}}/portfolio/page/{{nextPage}}" class="btn">
                             Next Page
                         </a>
                     </div>
 
                 {% elsif hasNext == 1 %}
                     <div class="col col--4-of-12 col--push-6-of-12">
-                        <a href="{{site.url}}/portfolio/page/{{nextPage}}" class="btn">
+                        <a href="{{site.url}}{{site.add-url}}/portfolio/page/{{nextPage}}" class="btn">
                             Next Page
                         </a>
                     </div>
 
                 {% elsif hasLast == 1 %}
                     <div class="col col--4-of-12 col--push-2-of-12">
-                        <a href="{{site.url}}/portfolio/page/{{lastPage}}" class="btn">
+                        <a href="{{site.url}}{{site.add-url}}/portfolio/page/{{lastPage}}" class="btn">
                             Previous Page
                         </a>
                     </div>

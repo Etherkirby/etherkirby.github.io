@@ -19,20 +19,20 @@
 
                     {% if page.next.layout contains "portfolio" and page.previous.layout contains "portfolio" %}
                         <div class="col col--4-of-12 col--push-2-of-12">
-                            <a href="{{ page.next.url }}" class="btn">
+                            <a href="{{site.url}}{{site.add-url}}/{{ page.next.url }}" class="btn">
                                 Newer Work
                             </a>
                         </div>
 
                         <div class="col col--4-of-12">
-                            <a href="{{ page.previous.url }}" class="btn">
+                            <a href="{{site.url}}{{site.add-url}}/{{ page.previous.url }}" class="btn">
                                 Older Work
                             </a>
                         </div>
 
                         {% elsif page.next.layout contains "portfolio" %}
                             <div class="col col--4-of-12 col--push-2-of-12">
-                                <a href="{{ page.next.url }}" class="btn">
+                                <a href="{{site.url}}{{site.add-url}}/{{ page.next.url }}" class="btn">
                                     Newer Work
                                 </a>
                             </div>
@@ -40,7 +40,7 @@
                         {% elsif page.previous.layout contains "portfolio" %}
 
                             <div class="col col--4-of-12 col--push-6-of-12">
-                                <a href="{{ page.previous.url }}" class="btn">
+                                <a href="{{site.url}}{{site.add-url}}/{{ page.previous.url }}" class="btn">
                                     Older Work
                                 </a>
                             </div>
